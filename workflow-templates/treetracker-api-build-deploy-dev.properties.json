@@ -1,0 +1,13 @@
+{
+  "name": "Treetracker API Workflow",
+  "description": "Treetracker API CI/CD workflow template.",
+  "iconName": "example-icon",
+  "categories": [
+      "JavaScript"
+  ],
+  "filePatterns": [
+      "package.json$",
+      "^Dockerfile",
+      ".*\\.md$"
+  ]
+}

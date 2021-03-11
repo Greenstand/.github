@@ -29,9 +29,9 @@ jobs:
     - name: run ESLint
       run: npm run lint
       working-directory: ${{ env.project-directory }}
-    - name: build frontend dev project
-      if: github.event_name == 'push' && github.repository == "Greenstand/${{ github.event.repository.name }}"
-      run: npm run build:dev
+    # define the endpoints for dev in github secrets
+    - name: build frontend project
+      run: "{{ secrets.DEV_APP_ENDPOINTS }} npm run build"
       working-directory: ${{ env.project-directory }}
     - uses: actions/upload-artifact@v2
       if: github.event_name == 'push' && github.repository == "Greenstand/${{ github.event.repository.name }}"
@@ -77,7 +77,7 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         name: frontend-bundle
-        path: build-dev
+        path: build
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:

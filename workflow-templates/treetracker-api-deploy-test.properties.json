@@ -1,7 +1,7 @@
 {
   "name": "Treetracker API TEST Deployment Workflow",
   "description": "Treetracker API CD workflow template targetted for TEST environments",
-  "iconName": "example-icon",
+  "iconName": "greenstand",
   "categories": [
       "JavaScript"
   ],

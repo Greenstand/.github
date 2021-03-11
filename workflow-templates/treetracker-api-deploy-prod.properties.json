@@ -1,7 +1,7 @@
 {
   "name": "Treetracker API PROD Deployment Workflow",
   "description": "Treetracker API CD workflow template targetted for PROD environments",
-  "iconName": "example-icon",
+  "iconName": "greenstand",
   "categories": [
       "JavaScript"
   ],

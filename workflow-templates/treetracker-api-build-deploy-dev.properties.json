@@ -1,7 +1,7 @@
 {
   "name": "Treetracker API Dev CI/CD Workflow",
   "description": "Treetracker API CI/CD workflow template targetted for DEV environments",
-  "iconName": "example-icon",
+  "iconName": "greenstand",
   "categories": [
       "JavaScript"
   ],

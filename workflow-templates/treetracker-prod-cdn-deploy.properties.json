@@ -1,11 +1,5 @@
 {
   "name": "Treetracker Frontend PROD Deployment Workflow",
   "description": "Treetracker Frontend CD workflow template targetted for PROD CDN",
-  "iconName": "greenstand",
-  "categories": [
-      "JavaScript"
-  ],
-  "filePatterns": [
-      "package.json$"
-  ]
+  "iconName": "greenstand"
 }

@@ -29,7 +29,7 @@ jobs:
     - name: run ESLint
       run: npm run lint
       working-directory: ${{ env.project-directory }}
-    # define the endpoints for dev in github secrets
+    # define the endpoints for DEV in github secrets
     - name: build frontend project
       run: "{{ secrets.DEV_APP_ENDPOINTS }} npm run build"
       working-directory: ${{ env.project-directory }}
@@ -78,12 +78,12 @@ jobs:
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
-        aws-access-key-id: ${{ secrets.AWS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET }}
+        aws-access-key-id: ${{ secrets.DEV_AWS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.DEV_AWS_SECRET }}
         aws-region: us-east-1
     - name: Copy front end resources to s3 bucket
       run: |
-        aws s3 sync build s3://${{ secrets.TEST_CDN_S3_BUCKET }} --delete
+        aws s3 sync build s3://${{ secrets.DEV_CDN_S3_BUCKET }} --delete
     - name: Invalidate cloudfront caches
       run: |
-        aws cloudfront create-invalidation --distribution-id ${{ secrets.TEST_CDN_DISTRIBUTION_ID }} --paths "/*"
+        aws cloudfront create-invalidation --distribution-id ${{ secrets.DEV_CDN_DISTRIBUTION_ID }} --paths "/*"

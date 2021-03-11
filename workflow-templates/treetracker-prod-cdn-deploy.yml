@@ -38,9 +38,6 @@ jobs:
       with:
         name: frontend-bundle
         path: build
-    - name: build frontend project
-      run: npm run build
-      working-directory: ${{ env.project-directory }}
     - name: run React tests
       run: npm test
       working-directory: ${{ env.project-directory }}
@@ -63,12 +60,12 @@ jobs:
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
-        aws-access-key-id: ${{ secrets.AWS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET }}
+        aws-access-key-id: ${{ secrets.PROD_AWS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.PROD_AWS_SECRET }}
         aws-region: us-east-1
     - name: Copy front end resources to s3 bucket
       run: |
-        aws s3 sync build-dev s3://${{ secrets.TEST_CDN_S3_BUCKET }} --delete
+        aws s3 sync build s3://${{ secrets.PROD_CDN_S3_BUCKET }} --delete
     - name: Invalidate cloudfront caches
       run: |
-        aws cloudfront create-invalidation --distribution-id ${{ secrets.TEST_CDN_DISTRIBUTION_ID }} --paths "/*"
+        aws cloudfront create-invalidation --distribution-id ${{ secrets.PROD_CDN_DISTRIBUTION_ID }} --paths "/*"

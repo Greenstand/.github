@@ -37,10 +37,7 @@ jobs:
       if: github.event_name == 'push' && github.repository == "Greenstand/${{ github.event.repository.name }}"
       with:
         name: frontend-bundle
-        path: build-dev
-    - name: build frontend project
-      run: npm run build
-      working-directory: ${{ env.project-directory }}
+        path: build
     - name: run React tests
       run: npm test
       working-directory: ${{ env.project-directory }}
@@ -86,7 +83,7 @@ jobs:
         aws-region: us-east-1
     - name: Copy front end resources to s3 bucket
       run: |
-        aws s3 sync build-dev s3://${{ secrets.TEST_CDN_S3_BUCKET }} --delete
+        aws s3 sync build s3://${{ secrets.TEST_CDN_S3_BUCKET }} --delete
     - name: Invalidate cloudfront caches
       run: |
         aws cloudfront create-invalidation --distribution-id ${{ secrets.TEST_CDN_DISTRIBUTION_ID }} --paths "/*"

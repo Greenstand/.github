@@ -1,12 +1,11 @@
 name: Frontend Prod CI/CD Pipeline
 
 on:
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'git-tag'
+        required: true
 
 env: 
   project-directory: ./

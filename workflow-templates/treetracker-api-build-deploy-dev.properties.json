@@ -1,5 +1,5 @@
 {
-  "name": "Treetracker API Dev CI/CD Workflow",
-  "description": "Treetracker API CI/CD workflow template targetted for DEV environments",
+  "name": "Treetracker Service Dev CI/CD Workflow",
+  "description": "Treetracker Service CI/CD workflow template targetted for DEV environments",
   "iconName": "greenstand"
 }

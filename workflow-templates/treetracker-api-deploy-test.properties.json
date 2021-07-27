@@ -1,5 +1,5 @@
 {
-  "name": "Treetracker API TEST Deployment Workflow",
-  "description": "Treetracker API CD workflow template targetted for TEST environments",
+  "name": "Treetracker Service TEST Deployment Workflow",
+  "description": "Treetracker Service CD workflow template targetted for TEST environments",
   "iconName": "greenstand"
 }

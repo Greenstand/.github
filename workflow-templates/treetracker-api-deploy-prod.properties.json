@@ -1,5 +1,5 @@
 {
-  "name": "Treetracker API PROD Deployment Workflow",
-  "description": "Treetracker API CD workflow template targetted for PROD environments",
+  "name": "Treetracker Service PROD Deployment Workflow",
+  "description": "Treetracker Service CD workflow template targetted for PROD environments",
   "iconName": "greenstand"
 }

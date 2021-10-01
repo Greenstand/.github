@@ -3,10 +3,10 @@ name: Frontend Dev CI/CD Pipeline
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     branches:
-      - master
+      - main
 
 env: 
   project-directory: ./

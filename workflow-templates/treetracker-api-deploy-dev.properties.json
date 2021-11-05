@@ -1,0 +1,5 @@
+{
+  "name": "Treetracker Service DEV Deployment Workflow",
+  "description": "Treetracker Service CD workflow template targetted for DEV environments",
+  "iconName": "greenstand"
+}

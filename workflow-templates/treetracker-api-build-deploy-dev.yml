@@ -12,7 +12,7 @@ jobs:
   test:
     name: Test
     runs-on: ubuntu-latest
-    container: node:10.18-jessie
+    container: node:16-alpine
     
     # Service containers to run with `container-job`
     services:
@@ -34,10 +34,10 @@ jobs:
       !contains(github.event.head_commit.message, 'skip-ci')
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js 14.x
+      - name: Use Node.js 16.x
         uses: actions/setup-node@v1
         with:
-          node-version: '14.x'
+          node-version: '16.x'
       - name: npm clean install
         run: npm ci
         working-directory: ${{ env.project-directory }}
@@ -60,10 +60,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       
-      - name: Use Node.js 14.x
+      - name: Use Node.js 16.x
         uses: actions/setup-node@v1
         with:
-          node-version: '14.x'
+          node-version: '16.x'
           
       - name: npm clean install
         run: npm ci

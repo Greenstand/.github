@@ -1,0 +1,5 @@
+{
+  "name": "Treetracker Frontend STAGING Deployment Workflow",
+  "description": "Treetracker Frontend CD workflow template targetted for STAGING CDN",
+  "iconName": "greenstand"
+}

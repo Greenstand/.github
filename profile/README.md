@@ -8,7 +8,7 @@ For details behind the model see [Greenstand Token](https://github.com/Greenstan
 
 For more on how to contribute see [Development Overview](https://github.com/Greenstand/Greenstand-Overview#welcome-to-greenstands-treetracker-project)
 
-This opensource Project is supported and hosted by [Digital Ocean](digitalocean.com) 
+This opensource Project is supported and hosted by [Digital Ocean](https://digitalocean.com) 
 <!--
 
 **Here are some ideas to get you started:**
